@@ -1,5 +1,5 @@
 '''
-Write a Python function to reverse a given string and return the reversed string.
+Write a Python function to reverse a given string and return the reversed string. / Write a Python function to reverse a given string using slicing.
 '''
 # Import the custom dialog from the other module
 from custom_dialog import CustomDialog, root
