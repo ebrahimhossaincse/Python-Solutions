@@ -1,28 +1,10 @@
 '''
 Write a Python program that takes an integer as input and prints whether it is even or odd.
 '''
+# Import the custom dialog from the other module
+from custom_dialog import CustomDialog, root
 
-import tkinter as tk
-from tkinter import simpledialog
-
-# Create the root window
-root = tk.Tk()
-root.withdraw()  # Hide the main window
-
-# Create a custom dialog class
-class CustomDialog(simpledialog.Dialog):
-    def body(self, master):
-        self.geometry("250x100")  # Set custom size (width x height)
-        tk.Label(master, text="Please enter the number:").grid(row=0)
-        self.entry = tk.Entry(master)
-        self.entry.grid(row=1)
-        return self.entry
-
-    def apply(self):
-        self.result = int(self.entry.get())  # Convert the result to an integer
-
-# Show the custom dialog
-dialog = CustomDialog(root, title="Input")
+dialog = CustomDialog(root, title="Input", text="Please enter an integer")
 num = dialog.result
 
 # Check if a number was provided
