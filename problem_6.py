@@ -2,7 +2,7 @@
 Write a Python function to check if a given string is a palindrome or not.
 '''
 # Import the custom dialog from the other module
-from custom_dialog import CustomDialog, root
+from custom_dialog import CustomDialog, root, messagebox
 
 # Show the custom dialog and get Celsius temperature as input
 dialog = CustomDialog(root, title="Input", text="Enter a String")
@@ -18,7 +18,7 @@ def is_palindrome(s):
 
 # Example usage
 if is_palindrome(input_string):
-    print(f'"{input_string}" is a palindrome.')
+    messagebox.showinfo("Result", f'"{input_string}" is a palindrome.')
 else:
-    print(f'"{input_string}" is not a palindrome.')
+    messagebox.showinfo("Result", f'"{input_string}" is not a palindrome.')
 

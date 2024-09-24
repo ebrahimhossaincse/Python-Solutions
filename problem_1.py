@@ -1,19 +1,19 @@
 '''
 Write a Python program to swap the values of two variables without using a temporary variable.
 '''
+# Import the custom dialog from the other module
+from custom_dialog import CustomDialog, root, messagebox
 
-import tkinter as tk
-from tkinter import simpledialog
+dialog = CustomDialog(root, title="Input", text="Please enter the first variable value: ")
+a = dialog.result
 
-root = tk.Tk()
-root.withdraw()
+dialog = CustomDialog(root, title="Input", text="Please enter the second variable value: ")
+b = dialog.result
 
-a = simpledialog.askstring("Input", "Please enter the first variable value: ")
-b = simpledialog.askstring("Input", "Please enter the second variable value: ")
+messagebox.showwarning("Info", f"Before swapping: a = {a}, b = {b}")
 
 # Swapping values without using a temporary variable
 a, b = b, a
 
-# Output the swapped values
-print(f"After swapping: a = {a}, b = {b}")
+messagebox.showinfo("Result", f"After swapping: a = {a}, b = {b}")
 
